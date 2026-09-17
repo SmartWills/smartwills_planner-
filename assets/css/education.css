@@ -1,0 +1,567 @@
+/**
+ * Education Dashboard Styles (education/dashboard.php)
+ */
+
+/* ===== Hero Banner ===== */
+.hero-banner {
+    background: linear-gradient(135deg, #8b0000, #b30000);
+    color: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.hero-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-left h5 {
+    letter-spacing: 2px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+.hero-left h1 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.hero-left p {
+    opacity: 0.9;
+    font-size: 1.0rem;
+}
+
+.hero-right {
+    flex-shrink: 0;
+    margin-left: 30px;
+    min-width: 200px;
+}
+
+/* ===== Progress Card ===== */
+.progress-card {
+    border: 2px solid #e0eaf2;
+    border-radius: 16px;
+    padding: 18px 22px;
+    background: #fde8e8;
+    min-width: 220px;
+}
+
+.progress-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+}
+
+.progress-header .label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0b0e11;
+    letter-spacing: 0.3px;
+    text-align: left;
+}
+
+.progress-header .percentage {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0b0e11;
+    line-height: 1.2;
+    text-align: right;
+    margin-top: -4px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 10px;
+    background: #d0d8e0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 6px 0 8px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 80%;
+    background: #7f0004;
+    border-radius: 6px;
+}
+
+.progress-desc {
+    font-size: 1.05rem;
+    color: #1d1d1d;
+    margin: 0;
+}
+
+.progress-desc strong {
+    color: #1a2c3e;
+    font-weight: 600;
+}
+
+/* ===== Info Grid ===== */
+.info-grid {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 20px 24px;
+    border: 1px solid #eef2f8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0e0e0e;
+    margin: 0 0 8px 0;
+}
+
+.info-card p {
+    font-size: 1.1rem;
+    color: #575757;
+    margin: 0;
+}
+
+/* ===== Section Header (Course Catalogue) ===== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+
+.section-header h2 {
+    font-size: 1.68rem;
+    font-weight: 700;
+    color: #1a2c3e;
+    margin: 0;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-wrapper input[type="text"] {
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.search-wrapper input[type="text"]:focus {
+    border-color: #7f0004;
+}
+
+.search-wrapper button {
+    background: #7f0004;
+    border: none;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-wrapper button:hover {
+    background: #a30006;
+}
+
+/* ===== Tabs & Dropdown ===== */
+.tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    background: #f0f4f9;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+    font-size: 1.15rem;
+}
+
+.dropdown-toggle:hover {
+    background: #dce4ec;
+}
+
+.dropdown-toggle .arrow {
+    font-size: 0.7rem;
+    transition: transform 0.25s;
+}
+
+.dropdown-toggle .arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #eef2f8;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    min-width: 140px;
+    padding: 6px 0;
+    z-index: 100;
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+    font-weight: 500;
+    color: #1a2c3e;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: 1.1rem;
+}
+
+.dropdown-menu li:hover {
+    background: #f0f4f9;
+}
+
+.dropdown-menu li.active {
+    background: #7f0004;
+    color: #fff;
+}
+
+.tab {
+    background: #f0f4f9;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1.15rem;
+}
+
+.tab.active {
+    background: #7f0004;
+    color: #fff;
+}
+
+.tab:hover {
+    background: #dce4ec;
+}
+
+.tab.active:hover {
+    background: #7f0004;
+}
+
+/* ===== Course Grid & Cards ===== */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #eef2f8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ---- Video Cover */
+.course-image {
+    height: 120px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    background-image: none !important;
+    animation: none !important;
+}
+
+/* Course Card 1 → picture1.png */
+.course-card:nth-child(1) .course-image {
+    background-image: url('/assets/images/picture1.png') !important;
+}
+
+/* Course Card 2 → picture2.png */
+.course-card:nth-child(2) .course-image {
+    background-image: url('/assets/images/picture2.png') !important;
+}
+
+/* 3rd Course Card → picture3.png */
+.course-card:nth-child(3) .course-image {
+    background-image: url('/assets/images/picture3.png') !important;
+}
+
+/* 4th Course Card → picture4.png */
+.course-card:nth-child(4) .course-image {
+    background-image: url('/assets/images/picture4.png') !important;
+}
+
+/* 5th Course Card → picture5.png */
+.course-card:nth-child(5) .course-image {
+    background-image: url('/assets/images/picture5.png') !important;
+}
+
+/* The 6th image and subsequent images → default to picture1.png */
+.course-card:nth-child(n+6) .course-image {
+    background-image: url('/assets/images/picture1.png') !important;
+}
+
+.course-image {
+    background-color: #d9e2ec;
+}
+
+.course-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 1.3rem;
+}
+
+.course-card p {
+    margin: 0 0 12px 0;
+    color: #555;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.course-card button {
+    background: #7f0004;
+    color: #fff;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: auto;
+    font-size: 1.0rem;
+}
+
+.course-card button:hover {
+    background: #a30006;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 30px 20px;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-left p {
+        font-size: 1.0rem;
+    }
+
+    .hero-right {
+        margin-left: 0;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .progress-card {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .progress-header .label {
+        font-size: 1.3rem;
+    }
+    .progress-header .percentage {
+        font-size: 1.15rem;
+    }
+    .progress-desc {
+        font-size: 0.95rem;
+    }
+
+    .info-grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .info-card {
+        padding: 16px 18px;
+    }
+
+    .info-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .info-card p {
+        font-size: 1.0rem;
+    }
+
+    /* ===== Mobile devices: Course Catalogue area centered ===== */
+    .section-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .section-header h2 {
+        font-size: 1.44rem;
+        text-align: center;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-wrapper input[type="text"] {
+        flex: 1;
+        max-width: 300px;
+        font-size: 1.0rem;
+    }
+    .search-wrapper button {
+        font-size: 1.0rem;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tab {
+        font-size: 1.05rem;
+    }
+    .dropdown-toggle {
+        font-size: 1.05rem;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    .course-card h4 {
+        font-size: 1.2rem;
+    }
+    .course-card p {
+        font-size: 1.0rem;
+    }
+    .course-card button {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    .hero-left h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-left p {
+        font-size: 0.95rem;
+    }
+
+    .progress-card {
+        padding: 14px 16px;
+    }
+
+    .progress-header .label {
+        font-size: 1.2rem;
+    }
+
+    .progress-header .percentage {
+        font-size: 1.1rem;
+    }
+
+    .progress-desc {
+        font-size: 0.9rem;
+    }
+
+    .info-grid {
+        gap: 12px;
+    }
+
+    .info-card {
+        padding: 14px 16px;
+    }
+
+    .info-card h3 {
+        font-size: 1.0rem;
+    }
+
+    .info-card p {
+        font-size: 0.9rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.32rem;
+    }
+
+    .tabs .tab {
+        font-size: 0.95rem;
+        padding: 6px 14px;
+    }
+    .dropdown-toggle {
+        font-size: 0.95rem;
+    }
+
+    .course-grid {
+        gap: 16px;
+    }
+
+    .course-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .course-card p {
+        font-size: 0.95rem;
+    }
+    .course-card button {
+        font-size: 0.9rem;
+    }
+}

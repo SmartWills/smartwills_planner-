@@ -1,0 +1,265 @@
+/**
+ * Risk Assessment Page Styles
+ */
+
+/* ===== Page Header ===== */
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.page-header h1 {
+    font-size: 2.0rem;
+    color: #000;
+    margin: 0;
+}
+.page-header .client-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    background: #f8fafd;
+    padding: 4px 16px 4px 8px;
+    border-radius: 40px;
+    border: 1px solid #e0eaf2;
+}
+.page-header .client-info .avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #e6f0fa;
+    color: #2d7fb9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem; 
+    text-transform: uppercase;
+}
+.page-header .client-info .client-name-text {
+    font-weight: 600;
+    color: #1e466e;
+    font-size: 1.45rem;
+}
+
+/* ===== Risk Container ===== */
+#riskContainer {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px 30px;
+    border: 1px solid #eef2f8;
+}
+
+/* ===== Intro Text ===== */
+.intro-text {
+    font-size: 1.42rem; 
+    color: #1a2c3e;
+    margin-bottom: 18px;
+    padding: 0;
+}
+
+/* ===== Risk Sections ===== */
+.risk-section {
+    background: #fafcfe;
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid #eef2f8;
+}
+.risk-section h3 {
+    font-size: 1.45rem; 
+    color: #1a2c3e;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border-bottom: 1px dashed #e0eaf2;
+    padding-bottom: 8px;
+}
+.risk-section h3 i {
+    color: #7a3f9e;
+    margin-right: 6px;
+}
+.ck-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+    padding: 3px 4px;
+    font-size: 1.32rem; 
+    color: #1f3a52;
+    line-height: 1.4;
+}
+.ck-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: #7a3f9e;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.ck-item label {
+    cursor: pointer;
+    flex: 1;
+}
+.ck-item:hover {
+    background: #f0f4fa;
+    border-radius: 6px;
+}
+
+/* ===== Buttons ===== */
+.modal-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.modal-btns .btn {
+    padding: 8px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.4rem; 
+}
+.btn-cancel {
+    background: #eef2f8;
+    color: #2c4a66;
+}
+.btn-cancel:hover {
+    background: #dce4ed;
+}
+.btn-save-risk {
+    background: #7a3f9e;
+    color: #fff;
+}
+.btn-save-risk:hover {
+    background: #5f2f7a;
+}
+
+/* ===== Risk Result ===== */
+.risk-result {
+    padding: 10px 0;
+}
+.risk-result h3 {
+    font-size: 1.7rem; 
+    color: #1a2c3e;
+    margin-bottom: 5px;
+}
+.score-display {
+    font-size: 2.7rem; 
+    font-weight: 700;
+    color: #1a2c3e;
+    margin: 10px 0 5px;
+}
+.risk-level {
+    font-size: 1.8rem; 
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 6px 18px;
+    border-radius: 40px;
+    display: inline-block;
+}
+.risk-level.low {
+    background: #e0f0e6;
+    color: #1f7a5a;
+}
+.risk-level.moderate {
+    background: #fef0e0;
+    color: #b87a1f;
+}
+.risk-level.high {
+    background: #fde8e8;
+    color: #b33c3c;
+}
+.desc {
+    background: #f8fafd;
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin-top: 15px;
+    font-size: 1.45rem; 
+    line-height: 1.6;
+    color: #1f3a52;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .page-header .client-info {
+        margin-left: 0;
+        justify-content: center;
+    }
+    #riskContainer {
+        padding: 16px;
+    }
+    .risk-section {
+        padding: 10px 12px;
+    }
+    .ck-item {
+        font-size: 1.2rem; 
+    }
+    .risk-result .score-display {
+        font-size: 2.25rem; 
+    }
+    .risk-result .risk-level {
+        font-size: 1.55rem; 
+        padding: 4px 14px;
+    }
+    .risk-result .desc {
+        padding: 14px 16px;
+        font-size: 1.3rem; 
+    }
+    .modal-btns .btn {
+        padding: 6px 20px;
+        font-size: 1.25rem; 
+    }
+    .page-header h1 {
+        font-size: 1.75rem; 
+    }
+    .page-header .client-info .client-name-text {
+        font-size: 1.35rem; 
+    }
+    .intro-text {
+        font-size: 1.3rem;
+    }
+    .risk-section h3 {
+        font-size: 1.35rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.55rem;
+    }
+    .page-header .client-info .client-name-text {
+        font-size: 1.25rem; 
+    }
+    .risk-result .score-display {
+        font-size: 2.05rem;
+    }
+    .risk-result .risk-level {
+        font-size: 1.45rem; 
+        padding: 3px 12px;
+    }
+    .risk-result .desc {
+        padding: 12px 14px;
+        font-size: 1.25rem; 
+    }
+    .ck-item {
+        font-size: 1.15rem; 
+    }
+    .intro-text {
+        font-size: 1.25rem; 
+    }
+    .risk-section h3 {
+        font-size: 1.3rem;
+    }
+    .modal-btns .btn {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,304 @@
+/**
+ * Topbar Styles
+ * Header/navigation bar with search and user controls
+ * Fully responsive for desktop, tablet, and mobile
+ */
+
+/* ===== Topbar Base ===== */
+.topbar {
+  height: 70px;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ===== Search Box ===== */
+.search-box {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  background: #f6f7fb;
+  border-radius: 8px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+  border-color: #8b0000;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+}
+
+.search-box .search-icon {
+  color: #aaa;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.search-box input {
+  width: 320px;
+  padding: 12px 0;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: #aaa;
+}
+
+/* ===== Right Section ===== */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.topbar-icon {
+  font-size: 1.2rem;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar-icon:hover {
+  transform: scale(1.1);
+  color: #8b0000;
+}
+
+.topbar-icon .badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #d9534f;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 30px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+#supportText {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+  cursor: default;
+  user-select: none;
+}
+
+/* ===== New Case Button ===== */
+.btn-new-case {
+  background: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-new-case:hover {
+  background: #7a0000;
+  box-shadow: 0 4px 12px rgba(139, 0, 0, 0.2);
+}
+
+.btn-new-case:active {
+  transform: scale(0.95);
+}
+
+.btn-new-case i {
+  font-size: 14px;
+}
+
+/* ===== Avatar ===== */
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #8b0000;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.avatar:hover {
+  background: #7a0000;
+  box-shadow: 0 4px 12px rgba(139, 0, 0, 0.2);
+}
+
+/* ===== Responsive: Tablet (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .topbar {
+    padding: 0 20px;
+    height: 65px;
+  }
+
+  .search-box input {
+    width: 250px;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  .topbar-right {
+    gap: 16px;
+  }
+
+  .btn-new-case {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .topbar-icon {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Responsive: Mobile (≤768px) ===== */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 16px;
+    height: 60px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .search-box {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 9px 0;
+    font-size: 13px;
+  }
+
+  .topbar-right {
+    gap: 12px;
+  }
+
+  .topbar-icon {
+    font-size: 1rem;
+  }
+
+  #supportText {
+    font-size: 12px;
+  }
+
+  .btn-new-case {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
+/* ===== Responsive: Small Mobile (≤480px) – Optimize search icon position ===== */
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0 12px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  /* The search box fills an entire line, 
+  with inner margins ensuring the icon doesn't touch the edge. */
+  .search-box {
+    flex: 1 1 100%;
+    order: 1;
+    padding: 0 10px;
+  }
+
+  /* The search icon size and spacing have been adjusted to make the position more appropriate. */
+  .search-box .search-icon {
+    font-size: 14px;
+    margin-right: 6px;
+    color: #888;
+  }
+
+  .search-box input {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .topbar-right {
+    order: 2;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 4px;
+  }
+
+  .topbar-icon {
+    font-size: 0.95rem;
+  }
+
+  /* Hide supporting text to save space */
+  #supportText {
+    display: none;
+  }
+
+  .btn-new-case {
+    padding: 6px 10px;
+    font-size: 11px;
+    gap: 4px;
+  }
+
+  .btn-new-case .btn-label {
+    display: none; /* Only display the plus icon */
+  }
+
+  .btn-new-case i {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .topbar-icon .badge {
+    font-size: 0.5rem;
+    min-width: 14px;
+    top: -4px;
+    right: -6px;
+    padding: 1px 4px;
+  }
+}

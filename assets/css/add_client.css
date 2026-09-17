@@ -1,0 +1,77 @@
+/**
+ * Add Client Page Styles
+ */
+.add-client-container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #eef2f8;
+}
+
+/* ===== The font size on the desktop has been uniformly increased (to match the Cases page by +0.2rem). ===== */
+.page-header h1 {
+    font-size: 1.7rem;          /* Refer to Cases desktop h1 */
+}
+
+.page-header .btn-cancel {
+    font-size: 1.0rem;          /* Refer to Cases desktop .btn-primary */
+}
+
+.page-header .btn-cancel:hover {
+    background: #dce4ed;
+}
+
+.fsection h3 {
+    font-size: 1.25rem;         /* Refer to Clients desktop fsection h3 (+0.2) */
+}
+
+.frow label {
+    font-size: 1.05rem;         /* Refer to Cases desktop .frow label */
+}
+
+.frow input,
+.frow select {
+    font-size: 1.05rem;         /* Refer to Cases Desktop .frow input */
+}
+
+.modal-btns .btn {
+    font-size: 1.1rem;          /* Refer to Cases Desktop .modal-btns .btn */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .add-client-container {
+        padding: 16px;
+    }
+    .frow label,
+    .frow input,
+    .frow select {
+        font-size: 1rem;        /* Keep the tablet size */
+    }
+}
+
+/* ===== Mobile (≤480px) - Refer to the existing increased values (no further changes) ===== */
+@media (max-width: 480px) {
+    .add-client-container {
+        padding: 14px;
+    }
+    .page-header h1 {
+        font-size: 1.3rem;    
+    }
+    .frow label {
+        font-size: 1.1rem;
+        width: auto;
+    }
+    .frow input,
+    .frow select {
+        font-size: 1.1rem;
+        padding: 8px 14px;
+    }
+    .modal-btns .btn {
+        font-size: 1.05rem;
+        padding: 8px 18px;
+    }
+    .fsection h3 {
+        font-size: 1.2rem;
+    }
+}

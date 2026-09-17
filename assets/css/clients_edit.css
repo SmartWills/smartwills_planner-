@@ -1,0 +1,201 @@
+/**
+ * clients_edit.css - Edit customer page specific style
+ */
+
+.edit-client-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 24px;
+    padding: 30px 35px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.edit-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    border-bottom: 2px solid #eef3f8;
+    padding-bottom: 16px;
+}
+
+.edit-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a2c3e;
+    margin: 0;
+}
+
+.edit-header h1 i {
+    color: #b30707;
+    margin-right: 10px;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    background: #eef2f8;
+    color: #2c4a66;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.15s;
+}
+
+.btn-back:hover {
+    background: #dce4ed;
+}
+
+.edit-form {
+    margin-top: 6px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #0f3b5c;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+
+.form-group label i {
+    color: #b30707;
+    width: 18px;
+    margin-right: 4px;
+}
+
+.form-group label .required {
+    color: #b30707;
+    margin-left: 2px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 9px 14px;
+    border: 1px solid #dce6ef;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    background: #fafcfe;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #b30707;
+    box-shadow: 0 0 0 3px rgba(179, 7, 7, 0.08);
+    background: #fff;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.alert {
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.alert.success {
+    background: #e0f0e6;
+    color: #1f7a5a;
+}
+
+.alert.error {
+    background: #fde8e8;
+    color: #b33c3c;
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid #eef3f8;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 40px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-save {
+    background: #b30707;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(179, 7, 7, 0.25);
+}
+
+.btn-save:hover {
+    background: #8f0505;
+    box-shadow: 0 6px 20px rgba(179, 7, 7, 0.35);
+}
+
+.btn-cancel {
+    background: #eef2f8;
+    color: #2c4a66;
+}
+
+.btn-cancel:hover {
+    background: #dce4ed;
+}
+
+@media (max-width: 768px) {
+    .edit-client-wrapper { padding: 20px 18px; }
+    .edit-header { flex-direction: column; align-items: stretch; gap: 12px; }
+    .edit-header h1 { font-size: 1.3rem; }
+    .form-grid { grid-template-columns: 1fr; gap: 14px; }
+    .form-group.full-width { grid-column: 1; }
+    .form-actions { flex-direction: column; align-items: stretch; }
+    .btn { justify-content: center; padding: 10px 20px; }
+}
+
+@media (max-width: 480px) {
+    .edit-client-wrapper { padding: 16px 12px; border-radius: 16px; }
+    .edit-header h1 { font-size: 1.1rem; }
+    .btn-back { font-size: 0.8rem; padding: 6px 14px; }
+    .form-group label { font-size: 0.8rem; }
+    .form-group input, .form-group select, .form-group textarea { font-size: 0.85rem; padding: 7px 12px; }
+    .btn { font-size: 0.85rem; padding: 8px 16px; }
+}

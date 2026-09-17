@@ -1,0 +1,678 @@
+/**
+ * Cases Page Styles (cases.php)
+ * Optimized version: The Add Case button on mobile devices has been changed to a circular icon.
+ */
+
+/* ===== Page Header ===== */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page-header h1 {
+  font-size: 1.7rem;
+  color: #000;
+  margin: 0;
+}
+
+.btn-primary {
+  background: #630202;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 1.0rem;
+}
+
+.btn-primary:hover {
+  background: #1a5f8a;
+}
+
+/* ===== Stats Grid ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px 20px;
+  border: 1px solid #eef2f8;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat-card .stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.stat-icon.blue {
+  background: #e6f0fa;
+  color: #a90404;
+}
+
+.stat-icon.red {
+  background: #fde8e8;
+  color: #d9534f;
+}
+
+.stat-icon.orange {
+  background: #fef0e0;
+  color: #f0ad4e;
+}
+
+.stat-icon.green {
+  background: #e0f0e6;
+  color: #2a9d8f;
+}
+
+.stat-icon.purple {
+  background: #ede0f5;
+  color: #8b5cf6;
+}
+
+.stat-card .stat-number {
+  font-size: 1.7rem; 
+  font-weight: 700;
+  color: #1e466e;
+}
+
+.stat-card .stat-label {
+  font-size: 0.95rem; 
+  color: #6f8ea3;
+}
+
+/* ===== Toolbar ===== */
+.toolbar {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.toolbar .search-box {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 30px;
+  padding: 0 16px;
+  border: 1px solid #e0eaf2;
+}
+
+.toolbar .search-box input {
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  font-size: 1.1rem; 
+}
+
+.toolbar .filter-group {
+  display: flex;
+  gap: 8px;
+}
+
+.toolbar .filter-group select {
+  padding: 7px 14px;
+  border-radius: 30px;
+  border: 1px solid #e0eaf2;
+  background: white;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+/* ===== Table ===== */
+.table-wrapper {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #eef2f8;
+  overflow: hidden;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  padding: 0 20px 4px;
+}
+
+.case-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem; 
+}
+
+.case-table th {
+  text-align: left;
+  padding: 14px 10px;
+  font-weight: 600;
+  color: #4a6f8a;
+  border-bottom: 2px solid #eef2f8;
+}
+
+.case-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f4fa;
+}
+
+.case-table tr:hover {
+  background: #f8fbfe;
+}
+
+.case-id {
+  font-weight: 600;
+  color: #1e466e;
+}
+
+.client-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #1e466e;
+}
+
+.client-name .avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e6f0fa;
+  color: #2d7fb9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem; 
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 30px;
+  font-size: 0.9rem; 
+  font-weight: 600;
+}
+
+.status-badge.in-progress {
+  background: #e6f0fa;
+  color: #1f6390;
+}
+
+.status-badge.in-review {
+  background: #fef0e0;
+  color: #b87a1f;
+}
+
+.status-badge.completed {
+  background: #e0f0e6;
+  color: #1f7a5a;
+}
+
+.status-badge.rejected {
+  background: #fde8e8;
+  color: #b33c3c;
+}
+
+.status-badge.pending {
+  background: #f5f0e0;
+  color: #8a7a1f;
+}
+
+.action-cell {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-sm.btn-edit {
+  background: #e6f0fa;
+  color: #1f6390;
+}
+
+.btn-sm.btn-delete {
+  background: #fde8e8;
+  color: #b33c3c;
+}
+
+.btn-sm.btn-view {
+  background: #e0f0e6;
+  color: #1f7a5a;
+}
+
+footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #e0eaf2;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #7c9ab3;
+}
+
+/* ===== Modal ===== */
+#addModal,
+#editModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 30px 20px;
+}
+
+#addModal .modal-box,
+#editModal .modal-box {
+  max-width: 520px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 32px;
+  padding: 30px 35px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eef3f8;
+  padding-bottom: 14px;
+}
+
+.modal-head h2 {
+  font-size: 1.7rem; 
+  color: #1a2c3e;
+  margin: 0;
+}
+
+.modal-head h2 i {
+  color: #b30707;
+}
+
+.modal-head .close {
+  background: none;
+  border: none;
+  font-size: 2.0rem;
+  cursor: pointer;
+  color: #6f8ea3;
+  transition: color 0.3s;
+}
+
+.modal-head .close:hover {
+  color: #b30707;
+}
+
+.fsection {
+  background: #f8fafd;
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+}
+
+.frow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.frow label {
+  font-weight: 500;
+  color: #0f3b5c;
+  width: 100px;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.frow input,
+.frow select {
+  flex: 1;
+  min-width: 160px;
+  padding: 6px 12px;
+  border: 1px solid #d0dce8;
+  border-radius: 30px;
+  font-size: 1.05rem; 
+  outline: none;
+  background: white;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.frow input:focus,
+.frow select:focus {
+  border-color: #b30707;
+  box-shadow: 0 0 0 3px rgba(179, 7, 7, 0.1);
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.modal-btns .btn {
+  padding: 8px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem; 
+}
+
+.modal-btns .btn-cancel {
+  background: #eef2f8;
+  color: #2c4a66;
+}
+
+.modal-btns .btn-cancel:hover {
+  background: #dce4ed;
+}
+
+.modal-btns .btn-save {
+  background: #b30707;
+  color: white;
+}
+
+.modal-btns .btn-save:hover {
+  background: #8f0505;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat-card {
+    padding: 14px 16px;
+  }
+
+  .stat-card .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-card .stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    align-self: flex-start;
+    font-size: 0.95rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .stat-card .stat-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+
+  .stat-card .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .stat-card .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .toolbar .search-box {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .toolbar .search-box input {
+    font-size: 1rem;
+  }
+
+  .toolbar .filter-group {
+    width: 100%;
+  }
+
+  .toolbar .filter-group select {
+    flex: 1;
+    font-size: 0.95rem;
+  }
+
+  .table-scroll {
+    padding: 0 12px 4px;
+  }
+
+  .case-table {
+    font-size: 0.95rem; 
+  }
+
+  .case-table th,
+  .case-table td {
+    padding: 10px 6px;
+  }
+
+  .client-name .avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+
+  .action-cell {
+    gap: 4px;
+  }
+
+  .btn-sm {
+    padding: 3px 8px;
+    font-size: 0.85rem;
+  }
+
+  #addModal .modal-box,
+  #editModal .modal-box {
+    padding: 20px 18px;
+  }
+
+  .modal-head h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-head .close {
+    font-size: 1.8rem;
+  }
+
+  .frow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .frow label {
+    width: auto;
+    font-size: 0.95rem;
+  }
+
+  .frow input,
+  .frow select {
+    width: 100%;
+    min-width: 0;
+    font-size: 0.95rem;
+  }
+
+  .modal-btns .btn {
+    font-size: 1rem;
+  }
+
+  .fsection {
+    padding: 14px 16px;
+  }
+}
+
+/* ===== Mobile mode (≤480px) button optimization + font adjustment (added 0.2rem) remains unchanged. ===== */
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.3rem; 
+  }
+
+  .page-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-primary {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    justify-content: center;
+    font-size: 0;
+    gap: 0;
+    align-self: center;
+    flex-shrink: 0;
+  }
+
+  .btn-primary i {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .stat-card .stat-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .stat-card .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .stat-card .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .case-table {
+    font-size: 1.0rem;
+  }
+
+  .case-table th,
+  .case-table td {
+    padding: 8px 6px;
+  }
+
+  .btn-sm {
+    font-size: 0.9rem;
+    padding: 4px 10px;
+  }
+
+  .modal-head h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal-btns .btn {
+    padding: 6px 18px;
+    font-size: 1.0rem;
+  }
+
+  .fsection {
+    padding: 12px 14px;
+  }
+
+  #addModal .modal-box,
+  #editModal .modal-box {
+    padding: 16px 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 140px;
+  }
+
+  .main-content {
+    margin-left: 140px;
+  }
+
+  .content {
+    padding: 8px 6px 0;
+  }
+}

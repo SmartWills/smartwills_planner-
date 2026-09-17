@@ -1,0 +1,476 @@
+/**
+ * Clients Page Styles
+ * All styles originally inline in clients.php
+ */
+
+/* ===== Page Header ===== */
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.page-header h1 {
+    font-size: 1.7rem;
+    color: #000;
+    margin: 0;
+}
+.btn-primary {
+    background: #630202;
+    color: #fff;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.0rem;
+}
+.btn-primary:hover {
+    background: #1a5f8a;
+}
+.btn-total {
+    background: transparent;
+    color: #1f6390;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    transition: background .2s;
+    white-space: nowrap;
+    margin: 0 8px;
+}
+.btn-total .num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f4a70;
+}
+.btn-total .label {
+    font-size: .95rem;
+    font-weight: 500;
+    color: #4a7a9a;
+    letter-spacing: .5px;
+}
+.btn-total i {
+    font-size: 1.3rem;
+    color: #4a7a9a;
+}
+.btn-total:hover {
+    background: #d0e4f2;
+}
+.btn-total:active {
+    transform: scale(.97);
+}
+
+/* ===== Toolbar ===== */
+.toolbar {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.toolbar .search-box {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 30px;
+    padding: 0 16px;
+    border: 1px solid #e0eaf2;
+}
+.toolbar .search-box input {
+    border: none;
+    background: 0 0;
+    padding: 8px 12px;
+    width: 100%;
+    outline: 0;
+    font-size: 1.0rem;
+}
+.toolbar .filter-group {
+    display: flex;
+    gap: 8px;
+}
+.toolbar .filter-group select {
+    padding: 7px 14px;
+    border-radius: 30px;
+    border: 1px solid #e0eaf2;
+    background: #fff;
+    outline: 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+/* ===== Table ===== */
+.table-wrapper {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #eef2f8;
+    overflow: hidden;
+}
+.table-scroll {
+    overflow-x: auto;
+    padding: 0 20px 4px;
+}
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.05rem;
+}
+.client-table th {
+    text-align: left;
+    padding: 14px 10px;
+    font-weight: 600;
+    color: #4a6f8a;
+    border-bottom: 2px solid #eef2f8;
+}
+.client-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #f0f4fa;
+}
+.client-table tr:hover {
+    background: #f8fbfe;
+}
+.client-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #1e466e;
+}
+.client-name .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e6f0fa;
+    color: #2d7fb9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .95rem;
+}
+.risk-badge {
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 30px;
+    font-size: .9rem;
+    font-weight: 700;
+}
+.risk-badge.low {
+    background: #e0f0e6;
+    color: #1f7a5a;
+}
+.risk-badge.moderate {
+    background: #fef0e0;
+    color: #b87a1f;
+}
+.risk-badge.high {
+    background: #fde8e8;
+    color: #b33c3c;
+}
+.status-badge {
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 30px;
+    font-size: .9rem;
+    font-weight: 600;
+}
+.status-badge.active {
+    background: #e6f0fa;
+    color: #1f6390;
+}
+.status-badge.done {
+    background: #e0f0e6;
+    color: #1f7a5a;
+}
+.status-badge.pending {
+    background: #f5f0e0;
+    color: #8a7a1f;
+}
+.action-cell {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.btn-sm {
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: .95rem;
+}
+.btn-sm.btn-edit {
+    background: #e6f0fa;
+    color: #1f6390;
+}
+.btn-sm.btn-delete {
+    background: #fde8e8;
+    color: #b33c3c;
+}
+.btn-sm.btn-plan {
+    background: #dff0e6;
+    color: #1f7a5a;
+}
+.btn-sm.btn-risk-analyze {
+    background: #f0e6fa;
+    color: #7a3f9e;
+}
+
+/* ===== Footer ===== */
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #e0eaf2;
+    text-align: center;
+    font-size: .85rem;
+    color: #7c9ab3;
+}
+
+/* ===== Modals (Edit & Add) ===== */
+#editModal, #addModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 30px 20px;
+}
+.modal-box {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 32px;
+    padding: 30px 35px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+#addModal .modal-box {
+    max-width: 500px;
+}
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eef3f8;
+    padding-bottom: 14px;
+}
+.modal-head h2 {
+    font-size: 1.7rem;
+    color: #1a2c3e;
+}
+.modal-head h2 i {
+    color: #b30707;
+}
+.modal-head .close {
+    background: 0;
+    border: 0;
+    font-size: 2.0rem;
+    cursor: pointer;
+    color: #6f8ea3;
+}
+.fsection {
+    background: #f8fafd;
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+}
+.fsection h3 {
+    font-size: 1.25rem;
+    color: #1a2c3e;
+    margin-bottom: 12px;
+}
+.fsection h3 i {
+    color: #b30707;
+}
+.frow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.frow label {
+    font-weight: 500;
+    color: #0f3b5c;
+    width: 130px;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+.frow input, .frow select {
+    flex: 1;
+    min-width: 160px;
+    padding: 6px 12px;
+    border: 1px solid #d0dce8;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    outline: 0;
+    background: #fff;
+}
+.frow input:focus, .frow select:focus {
+    border-color: #b30707;
+    box-shadow: 0 0 0 3px rgba(179,7,7,0.1);
+}
+.frow .ig {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.frow .ig label {
+    width: auto;
+    font-weight: 400;
+    font-size: 1.0rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+.frow .ig input[type="radio"], .frow .ig input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #b30707;
+    margin: 0;
+}
+.frow .small {
+    flex: 0.3;
+    min-width: 70px;
+}
+.frow .half {
+    flex: 0.5;
+    min-width: 100px;
+}
+.fsection .sub-title {
+    font-weight: 600;
+    color: #0f3b5c;
+    font-size: 1.05rem;
+    margin: 8px 0 6px;
+}
+.modal-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.modal-btns .btn {
+    padding: 8px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.modal-btns .btn-cancel {
+    background: #eef2f8;
+    color: #2c4a66;
+}
+.modal-btns .btn-cancel:hover {
+    background: #dce4ed;
+}
+.modal-btns .btn-save {
+    background: #b30707;
+    color: #fff;
+}
+.modal-btns .btn-save:hover {
+    background: #8f0505;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .page-header h1 { font-size: 1.5rem; }
+    .btn-primary { padding: 6px 18px; font-size: 1.0rem; }
+}
+@media (max-width: 768px) {
+    .page-header { flex-wrap: wrap; gap: 10px; }
+    .page-header h1 { font-size: 1.4rem; }
+    .btn-primary { padding: 6px 14px; font-size: 0.95rem; }
+    .btn-total { padding: 4px 12px; font-size: 1.1rem; }
+    .btn-total .num { font-size: 1.3rem; }
+    .btn-total .label { font-size: .85rem; }
+    .toolbar { flex-direction: column; align-items: stretch; gap: 10px; }
+    .toolbar .search-box { width: 100%; }
+    .filter-group { display: flex; gap: 8px; }
+    .filter-group select { flex: 1; }
+    .table-scroll { padding: 0 10px 4px; }
+    .client-table { font-size: .95rem; }
+    .client-table th, .client-table td { padding: 8px 6px; }
+    .client-name .avatar { width: 24px; height: 24px; font-size: .85rem; }
+    .risk-badge, .status-badge { font-size: .8rem; padding: 1px 8px; }
+    .action-cell { gap: 4px; }
+    .btn-sm { font-size: .85rem; padding: 2px 8px; }
+    .modal-box { padding: 20px; margin: 10px; }
+    #addModal .modal-box { max-width: 100%; }
+    .modal-head h2 { font-size: 1.4rem; }
+    .modal-head .close { font-size: 1.7rem; }
+    .fsection { padding: 14px 16px; }
+    .frow { flex-direction: column; align-items: stretch; }
+    .frow label { width: auto; }
+    .frow input, .frow select { width: 100%; min-width: 0; }
+    .frow .ig { flex-direction: column; align-items: flex-start; }
+    .modal-btns .btn { padding: 6px 20px; font-size: .95rem; }
+}
+
+/* ===== Mobile (≤480px) - The overall size has increased by 0.2rem. ===== */
+@media (max-width: 480px) {
+    .page-header h1 { font-size: 1.5rem; }   
+    .btn-primary { 
+        padding: 6px 14px; 
+        font-size: 1.1rem;                       
+    }
+    .btn-total { 
+        padding: 4px 10px; 
+        font-size: 1.15rem;                    
+        margin: 0 4px; 
+    }
+    .btn-total .num { font-size: 1.3rem; }      
+    .btn-total .label { font-size: 0.95rem; }   
+    .client-table { font-size: 1.05rem; }       
+    .client-table th, 
+    .client-table td { 
+        padding: 6px 4px; 
+    }
+    .client-name .avatar { 
+        width: 22px; 
+        height: 22px; 
+        font-size: 0.9rem;                       
+    }
+    .risk-badge, 
+    .status-badge { 
+        font-size: 0.9rem;                      
+        padding: 1px 6px; 
+    }
+    .btn-sm { 
+        font-size: 0.95rem;                      
+        padding: 2px 6px; 
+    }
+    .modal-box { padding: 14px; }
+    .modal-head h2 { font-size: 1.4rem; }         
+    .modal-head .close { font-size: 1.7rem; }     
+    .modal-btns .btn { 
+        padding: 4px 14px; 
+        font-size: 1.05rem;                       
+    }
+    .fsection { padding: 10px 12px; }
+    .fsection h3 { font-size: 1.15rem; }           
+    .frow label { font-size: 1.0rem; }           
+    .frow input, 
+    .frow select { 
+        font-size: 1.05rem;                         
+        padding: 4px 10px; 
+    }
+    .toolbar .search-box input { font-size: 1.05rem; }
+    .toolbar .filter-group select { font-size: 1.0rem; padding: 4px 10px; } 
+    footer { font-size: 0.9rem; }                 
+}
+
