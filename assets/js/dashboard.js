@@ -7,14 +7,13 @@ const coursesData = {
         { title: 'Advanced Will Drafting', desc: 'Complex Will Structures', btn: 'Enroll' }
     ],
     sg: [
-        { title: 'Legal Mastery', desc: 'Fundamentals of Singapore Wills', btn: 'Review' },
-        { title: 'Trust & Legacy', desc: 'Inter Vivos Trust Model', btn: 'Resume' },
-        { title: 'Singapore Probate', desc: 'Probate Process in SG', btn: 'Learn' }
+        { title: 'CSPS', desc: 'Certified SmartPlanner Singapore', btn: 'Review' },
+        { title: 'CSPS-i', desc: 'Certified SmartPlanner Singapore Islamic', btn: 'Resume' },
+        { title: 'CLPA', desc: 'Certified Licensed Property Association', btn: 'Learn' }
     ],
     my: [
-        { title: 'Malaysian Estate Law', desc: 'Overview of Malaysian Wills', btn: 'Start' },
-        { title: 'Islamic Estate Planning', desc: 'Faraid and Hibah', btn: 'Enroll' },
-        { title: 'Trustee Duties (MY)', desc: 'Responsibilities under Malaysian Trusts', btn: 'Resume' }
+        { title: 'CSPM', desc: 'Certified SmartPlanner Malaysia', btn: 'Start' },
+        { title: 'CSPM-i', desc: 'Certified SmartPlanner Malaysia Islamic', btn: 'Enroll' },
     ],
     th: [
         { title: 'Thai Civil Code', desc: 'Estate Administration in Thailand', btn: 'Begin' },
@@ -65,8 +64,8 @@ function renderCourses(tabKey, searchTerm = '') {
     // Apply search filter
     if (searchTerm.trim() !== '') {
         const term = searchTerm.trim().toLowerCase();
-        courses = courses.filter(c => 
-            c.title.toLowerCase().includes(term) || 
+        courses = courses.filter(c =>
+            c.title.toLowerCase().includes(term) ||
             c.desc.toLowerCase().includes(term)
         );
     }
@@ -111,14 +110,14 @@ function setActiveTab(tabKey) {
 }
 
 // Dropdown toggle
-dropdownToggle.addEventListener('click', function(e) {
+dropdownToggle.addEventListener('click', function (e) {
     e.stopPropagation();
     dropdownMenu.classList.toggle('open');
     dropdownArrow.classList.toggle('open');
 });
 
 // Close dropdown on outside click
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (!e.target.closest('.dropdown')) {
         dropdownMenu.classList.remove('open');
         dropdownArrow.classList.remove('open');
@@ -127,7 +126,7 @@ document.addEventListener('click', function(e) {
 
 // Dropdown item click
 menuItems.forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
         const tabKey = this.getAttribute('data-tab');
         setActiveTab(tabKey);
         dropdownMenu.classList.remove('open');
@@ -137,7 +136,7 @@ menuItems.forEach(item => {
 
 // Independent tab clicks
 tabButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         const tabKey = this.getAttribute('data-tab');
         setActiveTab(tabKey);
         dropdownMenu.classList.remove('open');
@@ -152,13 +151,13 @@ function handleSearch() {
 }
 
 searchBtn.addEventListener('click', handleSearch);
-searchInput.addEventListener('keyup', function(e) {
+searchInput.addEventListener('keyup', function (e) {
     if (e.key === 'Enter') {
         handleSearch();
     }
 });
 
 // Initial render
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     setActiveTab('all');
 });

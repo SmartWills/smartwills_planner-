@@ -1,4 +1,6 @@
 <?php
+require_once dirname(__DIR__) . '/includes/bootstrap.php';
+
 $pathPrefix = $pathPrefix ?? '';
 if ($pathPrefix === '') {
     $projectRoot = dirname(__DIR__);
@@ -12,7 +14,7 @@ if ($pathPrefix === '') {
         $pathPrefix = str_repeat('../', $segmentCount);
     }
 }
-$assetBase = $assetBase ?? smartwills_asset_base();
+$assetBase = $assetBase ?? (function_exists('smartwills_asset_base') ? smartwills_asset_base() : '/assets');
 ?>
 <button class="hamburger-menu" id="hamburgerMenu" aria-label="Open sidebar">
     <span></span>
